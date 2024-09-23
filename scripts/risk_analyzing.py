@@ -78,3 +78,13 @@ def perform_ab_test(group_A, group_B, alpha=0.05):
         print("Accept the null hypothesis. There are no risk differences between zip codes.")
 
 
+def print_test_results(null_hypothesis: str, test_statistic: float, p_value: float, alpha: float) -> None:
+    
+    print("Null Hypothesis:", null_hypothesis)
+    print("Test Statistic:", test_statistic)
+    print("P-value:", p_value)
+
+    if p_value < alpha:
+        print("Reject the null hypothesis.")
+    else:
+        print("Fail to reject the null hypothesis.")
